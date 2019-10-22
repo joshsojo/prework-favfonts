@@ -1,0 +1,23 @@
+.font-card {
+  border-top: 2px solid black;
+  text-align: left;
+  margin: auto 0.5rem 4rem;
+  &__add-icon {
+    color: red;
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    font-size: 1rem;
+  }
+  h3 {
+    text-transform: capitalize;
+    margin-top: 1rem;
+  }
+  h4 {
+    text-transform: capitalize;
+    color: #8a8a8a;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}

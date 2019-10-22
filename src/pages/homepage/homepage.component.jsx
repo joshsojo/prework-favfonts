@@ -1,6 +1,8 @@
 import React from "react";
 
 import { Row, Col, Icon } from "antd";
+import FontCard from "../../components/font-card/font-card.component";
+
 import "antd/dist/antd.css";
 import "./homepage.styles.scss";
 
@@ -108,6 +110,22 @@ class HomePage extends React.Component {
             </Row>
           </form>
         </div>
+        {/* END OF INPUT FUNCTION */}
+        <section className="main-section">
+          <Row gutter={[16, 16]}>
+            <FontCard />
+            <FontCard />
+            <FontCard />
+            <FontCard />
+            <FontCard />
+            <FontCard />
+            <FontCard />
+            <FontCard />
+          </Row>
+        </section>
+        <footer className="footer">
+          <p>Made by Josh | 2019 | Chingu Pre-Work Project</p>
+        </footer>
       </div>
     );
   }
