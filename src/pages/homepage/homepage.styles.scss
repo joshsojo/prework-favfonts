@@ -1,0 +1,51 @@
+.input-form {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 1px solid black;
+}
+
+.input-row {
+  &__input {
+    width: 100%;
+    border: none;
+    margin-right: 1rem;
+    padding-left: 0.5rem;
+  }
+  &__select {
+    width: 100%;
+  }
+  &__toggle {
+    width: 30%;
+  }
+  &__icon {
+    &:hover,
+    &active {
+      cursor: pointer;
+    }
+  }
+}
+
+.mode-toggle {
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  outline: none;
+  margin: 0.2rem;
+  &:hover,
+  &:active {
+    cursor: pointer;
+  }
+  &__dark {
+    background-color: #000;
+  }
+  &__white {
+    background-color: #fff;
+  }
+}
+
+.select-font {
+  width: 7rem;
+  border: none;
+  outline: none;
+  background-color: #fff;
+}
