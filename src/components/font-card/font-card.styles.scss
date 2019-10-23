@@ -1,5 +1,5 @@
 .font-card {
-  border-top: 2px solid black;
+  border-top: 2px solid #868686;
   text-align: left;
   margin: 1rem 0.5rem 2rem;
   &__add-icon {
@@ -12,6 +12,7 @@
   h3 {
     text-transform: capitalize;
     margin-top: 1rem;
+    color: black;
   }
   h4 {
     text-transform: capitalize;

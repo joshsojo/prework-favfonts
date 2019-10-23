@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Row, Col, Icon, Spin } from "antd";
+import Header from "../../components/header/header.component";
 import FontCard from "../../components/font-card/font-card.component";
 
 import "antd/dist/antd.css";
@@ -100,7 +101,12 @@ class HomePage extends React.Component {
       font.family.toLowerCase().includes(searchFontsField.toLowerCase())
     );
     return (
-      <div className="home-page">
+      <div
+        className={`home-page container ${
+          darkModeToggle ? "container__dark" : null
+        }`}
+      >
+        <Header />
         <div className="input-function">
           <form className="input-form" onSubmit={this.handleSubmit}>
             <Row style={{ borderRadius: "3rem" }}>
@@ -120,7 +126,10 @@ class HomePage extends React.Component {
                 md={12}
                 lg={7}
                 xl={7}
-                style={{ borderLeft: "1px solid black" }}
+                style={{
+                  borderLeft: "1px solid #868686",
+                  borderRight: "1px solid #868686"
+                }}
               >
                 <input
                   autoComplete="off"
@@ -131,14 +140,7 @@ class HomePage extends React.Component {
                   placeholder="Type Something"
                 />
               </Col>
-              <Col
-                xs={6}
-                sm={6}
-                md={6}
-                lg={2}
-                xl={2}
-                style={{ borderLeft: "1px solid black" }}
-              >
+              <Col xs={6} sm={6} md={6} lg={2} xl={2}>
                 <select
                   defaultValue="32"
                   onChange={this.handleChange}
@@ -151,7 +153,16 @@ class HomePage extends React.Component {
                   <option value="40">40px</option>
                 </select>
               </Col>
-              <Col xs={6} sm={6} md={6} lg={2} xl={2}>
+              <Col
+                xs={6}
+                sm={6}
+                md={6}
+                lg={2}
+                xl={2}
+                onClick={() =>
+                  this.setState({ darkModeToggle: !darkModeToggle })
+                }
+              >
                 {!darkModeToggle ? (
                   <button className="mode-toggle mode-toggle__dark"></button>
                 ) : (

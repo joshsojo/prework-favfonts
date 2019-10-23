@@ -12,7 +12,7 @@ const FontCard = ({ family, category, size, text, cardMd, cardLg, cardXl }) => (
       <span className="font-card__add-icon">
         <Icon type="plus-circle" />
       </span>
-      <h4>christiain robertson</h4>
+      <h4>{category}</h4>
       <FontText
         font={family}
         category={category}
