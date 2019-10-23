@@ -1,4 +1,5 @@
-https://github.com/joshtru/prework-favfonts/blob/master/fav-font.gif
+<img src="https://github.com/joshtru/prework-favfonts/blob/master/fav-font.gif"/>
+
 ### [`View Demo`](https://joshtru.github.io/prework-favfonts/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
