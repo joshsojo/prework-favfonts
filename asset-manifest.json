@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/joshtru/prework-favfonts.git/static/css/main.268c8b3c.chunk.css",
+    "main.js": "/joshtru/prework-favfonts.git/static/js/main.8fe00483.chunk.js",
+    "main.js.map": "/joshtru/prework-favfonts.git/static/js/main.8fe00483.chunk.js.map",
+    "runtime-main.js": "/joshtru/prework-favfonts.git/static/js/runtime-main.034fcada.js",
+    "runtime-main.js.map": "/joshtru/prework-favfonts.git/static/js/runtime-main.034fcada.js.map",
+    "static/css/2.aa7fcd32.chunk.css": "/joshtru/prework-favfonts.git/static/css/2.aa7fcd32.chunk.css",
+    "static/js/2.b7e392d6.chunk.js": "/joshtru/prework-favfonts.git/static/js/2.b7e392d6.chunk.js",
+    "static/js/2.b7e392d6.chunk.js.map": "/joshtru/prework-favfonts.git/static/js/2.b7e392d6.chunk.js.map",
+    "index.html": "/joshtru/prework-favfonts.git/index.html",
+    "precache-manifest.9d96c1ec41d6f83e1bd176c3947d2c23.js": "/joshtru/prework-favfonts.git/precache-manifest.9d96c1ec41d6f83e1bd176c3947d2c23.js",
+    "service-worker.js": "/joshtru/prework-favfonts.git/service-worker.js",
+    "static/css/2.aa7fcd32.chunk.css.map": "/joshtru/prework-favfonts.git/static/css/2.aa7fcd32.chunk.css.map",
+    "static/css/main.268c8b3c.chunk.css.map": "/joshtru/prework-favfonts.git/static/css/main.268c8b3c.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.034fcada.js",
+    "static/css/2.aa7fcd32.chunk.css",
+    "static/js/2.b7e392d6.chunk.js",
+    "static/css/main.268c8b3c.chunk.css",
+    "static/js/main.8fe00483.chunk.js"
+  ]
+}
