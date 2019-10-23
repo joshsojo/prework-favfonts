@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Row, Col, Icon, Spin } from "antd";
-import Header from "../../components/header/header.component";
 import FontCard from "../../components/font-card/font-card.component";
 
 import "antd/dist/antd.css";
@@ -124,7 +123,6 @@ class HomePage extends React.Component {
     const filteredTotal = filteredFontArray.length;
     return (
       <div className="home-page">
-        <Header />
         <div className="input-function">
           <form className="input-form" onSubmit={this.handleSubmit}>
             <Row
