@@ -104,7 +104,7 @@ class HomePage extends React.Component {
         <div className="input-function">
           <form className="input-form" onSubmit={this.handleSubmit}>
             <Row style={{ borderRadius: "3rem" }}>
-              <Col xs={2} sm={4} md={6} lg={7} xl={7}>
+              <Col xs={12} sm={12} md={12} lg={7} xl={7}>
                 <input
                   autoComplete="off"
                   onChange={this.handleChange}
@@ -115,8 +115,8 @@ class HomePage extends React.Component {
                 />
               </Col>
               <Col
-                xs={20}
-                sm={16}
+                xs={12}
+                sm={12}
                 md={12}
                 lg={7}
                 xl={7}
@@ -132,11 +132,11 @@ class HomePage extends React.Component {
                 />
               </Col>
               <Col
-                xs={2}
-                sm={4}
+                xs={6}
+                sm={6}
                 md={6}
-                lg={4}
-                xl={4}
+                lg={2}
+                xl={2}
                 style={{ borderLeft: "1px solid black" }}
               >
                 <select
@@ -151,7 +151,7 @@ class HomePage extends React.Component {
                   <option value="40">40px</option>
                 </select>
               </Col>
-              <Col xs={20} sm={16} md={12} lg={2} xl={2}>
+              <Col xs={6} sm={6} md={6} lg={2} xl={2}>
                 {!darkModeToggle ? (
                   <button className="mode-toggle mode-toggle__dark"></button>
                 ) : (
@@ -159,9 +159,9 @@ class HomePage extends React.Component {
                 )}
               </Col>
               <Col
-                xs={20}
-                sm={16}
-                md={12}
+                xs={6}
+                sm={6}
+                md={6}
                 lg={2}
                 xl={2}
                 onClick={() => this.toggleGrid()}
@@ -172,7 +172,7 @@ class HomePage extends React.Component {
                   <Icon className="input-row__icon" type="unordered-list" />
                 )}
               </Col>
-              <Col xs={20} sm={16} md={12} lg={2} xl={2}>
+              <Col xs={6} sm={6} md={6} lg={2} xl={2}>
                 <button className="reset-button" type="reset">
                   <Icon
                     onClick={() => this.reloadPage()}
