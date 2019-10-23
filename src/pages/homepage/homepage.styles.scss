@@ -2,14 +2,11 @@
   text-align: center;
 }
 
-.container {
-  padding: 0 2rem;
-  &__dark {
-    background-color: #000;
+.container-dark {
+  color: #fff;
+  background-color: #000;
+  h3 {
     color: #fff;
-    h3 {
-      color: #fff;
-    }
   }
 }
 
@@ -33,6 +30,16 @@
   }
   &__toggle {
     width: 30%;
+  }
+  &__col {
+    @media only screen and (max-width: 575px) {
+      &__toggle-grid,
+      &__toggle-dark,
+      &__font,
+      &__type {
+        display: none;
+      }
+    }
   }
   &__icon {
     &:hover,
@@ -64,6 +71,7 @@
   width: 7rem;
   border: none;
   outline: none;
+  padding-left: 2rem;
   background-color: rgba(#fff, 0);
 }
 

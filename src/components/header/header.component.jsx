@@ -12,12 +12,12 @@ const Header = () => (
           <span className="header__logo--google">Google</span>
           <span className="header__logo--fonts">Fonts</span>
         </Col>
-        <Col span={8} className="header__links">
+        <span className="header__links">
           <span>catalog</span>
           <span>featured</span>
           <span>articles</span>
           <span>about</span>
-        </Col>
+        </span>
       </Row>
     </header>
   </div>

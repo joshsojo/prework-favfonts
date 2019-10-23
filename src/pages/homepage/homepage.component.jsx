@@ -57,6 +57,16 @@ class HomePage extends React.Component {
     }
   };
 
+  toggleDarkMode = () => {
+    const { darkModeToggle } = this.state;
+    if (!darkModeToggle) {
+      document.body.classList.add("container-dark");
+    } else {
+      document.body.classList.remove("container-dark");
+    }
+    this.setState({ darkModeToggle: !darkModeToggle });
+  };
+
   handleChange = async event => {
     const { name, value } = await event.target;
     await this.setState({
@@ -69,6 +79,7 @@ class HomePage extends React.Component {
   };
 
   componentDidMount() {
+    document.body.classList.add("container__dark");
     try {
       this.setState({ isLoading: true });
       fetch(
@@ -96,7 +107,6 @@ class HomePage extends React.Component {
       cardLg,
       cardXl
     } = this.state;
-    console.log();
     const filteredFontArray = fontsArray.filter(font =>
       font.family.toLowerCase().includes(searchFontsField.toLowerCase())
     );
@@ -109,8 +119,23 @@ class HomePage extends React.Component {
         <Header />
         <div className="input-function">
           <form className="input-form" onSubmit={this.handleSubmit}>
-            <Row style={{ borderRadius: "3rem" }}>
-              <Col xs={12} sm={12} md={12} lg={7} xl={7}>
+            <Row
+              style={{
+                borderRadius: "3rem",
+                border: "1px solid #868686",
+                padding: "0.4rem 2rem"
+              }}
+            >
+              <Col
+                xs={23}
+                sm={23}
+                md={16}
+                lg={9}
+                xl={9}
+                style={{
+                  borderRight: "1px solid #868686"
+                }}
+              >
                 <input
                   autoComplete="off"
                   onChange={this.handleChange}
@@ -121,15 +146,15 @@ class HomePage extends React.Component {
                 />
               </Col>
               <Col
-                xs={12}
-                sm={12}
-                md={12}
-                lg={7}
-                xl={7}
+                xs={0}
+                sm={0}
+                md={0}
+                lg={9}
+                xl={9}
                 style={{
-                  borderLeft: "1px solid #868686",
                   borderRight: "1px solid #868686"
                 }}
+                className="input-row__col__type"
               >
                 <input
                   autoComplete="off"
@@ -140,7 +165,15 @@ class HomePage extends React.Component {
                   placeholder="Type Something"
                 />
               </Col>
-              <Col xs={6} sm={6} md={6} lg={2} xl={2}>
+              <Col
+                xs={0}
+                sm={0}
+                md={3}
+                lg={3}
+                xl={3}
+                // style={{ marginTop: "1rem" }}
+                className="input-row__col__font"
+              >
                 <select
                   defaultValue="32"
                   onChange={this.handleChange}
@@ -154,14 +187,14 @@ class HomePage extends React.Component {
                 </select>
               </Col>
               <Col
-                xs={6}
-                sm={6}
-                md={6}
-                lg={2}
-                xl={2}
-                onClick={() =>
-                  this.setState({ darkModeToggle: !darkModeToggle })
-                }
+                xs={0}
+                sm={0}
+                md={2}
+                lg={1}
+                xl={1}
+                // style={{ marginTop: "1rem" }}
+                onClick={() => this.toggleDarkMode()}
+                className="input-row__col__toggle-dark"
               >
                 {!darkModeToggle ? (
                   <button className="mode-toggle mode-toggle__dark"></button>
@@ -170,12 +203,13 @@ class HomePage extends React.Component {
                 )}
               </Col>
               <Col
-                xs={6}
-                sm={6}
-                md={6}
-                lg={2}
-                xl={2}
+                xs={0}
+                sm={0}
+                md={1}
+                lg={1}
+                xl={1}
                 onClick={() => this.toggleGrid()}
+                className="input-row__col__toggle-grid"
               >
                 {grideViewToggle ? (
                   <Icon className="input-row__icon" type="table" />
@@ -183,7 +217,7 @@ class HomePage extends React.Component {
                   <Icon className="input-row__icon" type="unordered-list" />
                 )}
               </Col>
-              <Col xs={6} sm={6} md={6} lg={2} xl={2}>
+              <Col xs={1} sm={1} md={1} lg={1} xl={1}>
                 <button className="reset-button" type="reset">
                   <Icon
                     onClick={() => this.reloadPage()}
