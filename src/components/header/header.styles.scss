@@ -1,5 +1,5 @@
 .header {
-  padding: 1.5rem 2rem 1rem;
+  padding: 1.5rem 0 1rem 0;
   border-bottom: 1px solid #e6e6e6;
   &__logo {
     float: right;
@@ -17,6 +17,11 @@
     padding-top: 0.5rem;
     :not(:last-child) {
       margin-right: 1rem;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &__links {
+      display: none;
     }
   }
 }
