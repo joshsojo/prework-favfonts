@@ -119,11 +119,7 @@ class HomePage extends React.Component {
     );
     const filteredTotal = filteredFontArray.length;
     return (
-      <div
-        className={`home-page container ${
-          darkModeToggle ? "container__dark" : null
-        }`}
-      >
+      <div className="home-page">
         <Header />
         <div className="input-function">
           <form className="input-form" onSubmit={this.handleSubmit}>
