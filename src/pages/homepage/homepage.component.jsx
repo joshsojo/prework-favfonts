@@ -36,8 +36,12 @@ class HomePage extends React.Component {
       inputWordField: "Then came the night of the first falling start.",
       fontSize: "32",
       darkModeToggle: false,
-      grideViewToggle: false
+      grideViewToggle: false,
+      cardMd: 6,
+      cardLg: 6,
+      cardXl: 6
     });
+    document.body.classList.remove("container-dark");
   };
 
   toggleGrid = () => {
