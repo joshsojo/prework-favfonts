@@ -10,6 +10,7 @@
     border: none;
     margin-right: 1rem;
     padding-left: 0.5rem;
+    outline: none;
   }
   &__select {
     width: 100%;
@@ -47,7 +48,7 @@
   width: 7rem;
   border: none;
   outline: none;
-  background-color: #fff;
+  background-color: rgba(#fff, 0);
 }
 
 .main-section {

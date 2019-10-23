@@ -10,9 +10,10 @@ const FontText = styled.p`
   font-family: '${props => props.font || "Open Sans"}', ${props =>
   props.category || "sans-serif"};
   font-size: ${props => props.size || 32}px;
+  padding-bottom: 2rem;
 `;
 
-const FontCard = ({ family, category, size }) => (
+const FontCard = ({ family, category, size, text }) => (
   <Col xs={24} sm={24} md={6} lg={6} xl={6}>
     <div className="font-card">
       <h3>{family}</h3>
@@ -23,9 +24,12 @@ const FontCard = ({ family, category, size }) => (
       <FontText
         font={family}
         category={category}
-        link={`https://fonts.googleapis.com/css?family=${family}&display=swap`}
+        size={size}
+        link={`https://fonts.googleapis.com/css?family=${
+          family ? family : "Open Sans"
+        }&display=swap`}
       >
-        Then came the night of the first falling star
+        {text}
       </FontText>
     </div>
   </Col>
