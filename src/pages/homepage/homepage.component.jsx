@@ -1,12 +1,11 @@
 import React from "react";
 
-import { Row, Col, Icon, Result, Spin } from "antd";
+import { Row, Col, Icon, Spin } from "antd";
 import FontCard from "../../components/font-card/font-card.component";
 
 import "antd/dist/antd.css";
 import "./homepage.styles.scss";
 
-// const API_KEY = "AIzaSyB4bp5OGaQ1rbXUhJhn5b78kgAO0f5z3Wo";
 class HomePage extends React.Component {
   constructor() {
     super();
@@ -17,7 +16,10 @@ class HomePage extends React.Component {
       darkModeToggle: false,
       grideViewToggle: false,
       fontsArray: [],
-      isLoading: false
+      isLoading: false,
+      cardMd: 6,
+      cardLg: 6,
+      cardXl: 6
     };
   }
 
@@ -33,6 +35,25 @@ class HomePage extends React.Component {
       darkModeToggle: false,
       grideViewToggle: false
     });
+  };
+
+  toggleGrid = () => {
+    const { grideViewToggle } = this.state;
+    if (grideViewToggle) {
+      this.setState({
+        cardMd: 6,
+        cardLg: 6,
+        cardXl: 6,
+        grideViewToggle: !grideViewToggle
+      });
+    } else if (!grideViewToggle) {
+      this.setState({
+        cardMd: 24,
+        cardLg: 24,
+        cardXl: 24,
+        grideViewToggle: !grideViewToggle
+      });
+    }
   };
 
   handleChange = async event => {
@@ -69,7 +90,10 @@ class HomePage extends React.Component {
       fontSize,
       inputWordField,
       searchFontsField,
-      isLoading
+      isLoading,
+      cardMd,
+      cardLg,
+      cardXl
     } = this.state;
     console.log();
     const filteredFontArray = fontsArray.filter(font =>
@@ -116,15 +140,14 @@ class HomePage extends React.Component {
                 style={{ borderLeft: "1px solid black" }}
               >
                 <select
+                  defaultValue="32"
                   onChange={this.handleChange}
                   name="fontSize"
                   className="input-row__select select-font"
                 >
                   <option value="20">20px</option>
                   <option value="24">24px</option>
-                  <option selected value="32">
-                    32px
-                  </option>
+                  <option value="32">32px</option>
                   <option value="40">40px</option>
                 </select>
               </Col>
@@ -135,7 +158,14 @@ class HomePage extends React.Component {
                   <button className="mode-toggle mode-toggle__white"></button>
                 )}
               </Col>
-              <Col xs={20} sm={16} md={12} lg={2} xl={2}>
+              <Col
+                xs={20}
+                sm={16}
+                md={12}
+                lg={2}
+                xl={2}
+                onClick={() => this.toggleGrid()}
+              >
                 {grideViewToggle ? (
                   <Icon className="input-row__icon" type="table" />
                 ) : (
@@ -143,11 +173,13 @@ class HomePage extends React.Component {
                 )}
               </Col>
               <Col xs={20} sm={16} md={12} lg={2} xl={2}>
-                <Icon
-                  onClick={() => this.reloadPage}
-                  className="input-row__icon"
-                  type="reload"
-                />
+                <button className="reset-button" type="reset">
+                  <Icon
+                    onClick={() => this.reloadPage()}
+                    className="input-row__icon"
+                    type="reload"
+                  />
+                </button>
               </Col>
             </Row>
           </form>
@@ -165,6 +197,9 @@ class HomePage extends React.Component {
                     category={font.category}
                     size={fontSize}
                     text={inputWordField}
+                    cardMd={cardMd}
+                    cardLg={cardLg}
+                    cardXl={cardXl}
                   />
                 ))
             ) : (

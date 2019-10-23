@@ -13,8 +13,8 @@ const FontText = styled.p`
   padding-bottom: 2rem;
 `;
 
-const FontCard = ({ family, category, size, text }) => (
-  <Col xs={24} sm={24} md={6} lg={6} xl={6}>
+const FontCard = ({ family, category, size, text, cardMd, cardLg, cardXl }) => (
+  <Col xs={24} sm={24} md={cardMd} lg={cardLg} xl={cardXl}>
     <div className="font-card">
       <h3>{family}</h3>
       <span className="font-card__add-icon">
