@@ -237,6 +237,7 @@ class HomePage extends React.Component {
           </form>
         </div>
         {/* END OF INPUT FUNCTION */}
+        {/* BEGINNING OF MAIN SECTION */}
         <section className="main-section">
           <p className="main-section__viewing-total">
             Viewing <span>{filteredTotal}</span> of <span>{loadTotal}</span>{" "}
