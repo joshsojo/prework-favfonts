@@ -81,7 +81,6 @@ class HomePage extends React.Component {
   };
 
   componentDidMount() {
-    document.body.classList.add("container__dark");
     try {
       this.setState({ isLoading: true });
       fetch(
