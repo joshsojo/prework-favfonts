@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/prework-favfonts/static/css/main.62462f70.chunk.css",
+    "main.css": "/prework-favfonts/static/css/main.5e50144d.chunk.css",
     "main.js": "/prework-favfonts/static/js/main.132b845c.chunk.js",
     "main.js.map": "/prework-favfonts/static/js/main.132b845c.chunk.js.map",
     "runtime-main.js": "/prework-favfonts/static/js/runtime-main.660c8cc5.js",
@@ -9,16 +9,16 @@
     "static/js/2.2cf664f4.chunk.js": "/prework-favfonts/static/js/2.2cf664f4.chunk.js",
     "static/js/2.2cf664f4.chunk.js.map": "/prework-favfonts/static/js/2.2cf664f4.chunk.js.map",
     "index.html": "/prework-favfonts/index.html",
-    "precache-manifest.c6085dcaa0f529ee840da1e386d2ef60.js": "/prework-favfonts/precache-manifest.c6085dcaa0f529ee840da1e386d2ef60.js",
+    "precache-manifest.65ca85d2073eb26701548db5714b217e.js": "/prework-favfonts/precache-manifest.65ca85d2073eb26701548db5714b217e.js",
     "service-worker.js": "/prework-favfonts/service-worker.js",
     "static/css/2.aa7fcd32.chunk.css.map": "/prework-favfonts/static/css/2.aa7fcd32.chunk.css.map",
-    "static/css/main.62462f70.chunk.css.map": "/prework-favfonts/static/css/main.62462f70.chunk.css.map"
+    "static/css/main.5e50144d.chunk.css.map": "/prework-favfonts/static/css/main.5e50144d.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.660c8cc5.js",
     "static/css/2.aa7fcd32.chunk.css",
     "static/js/2.2cf664f4.chunk.js",
-    "static/css/main.62462f70.chunk.css",
+    "static/css/main.5e50144d.chunk.css",
     "static/js/main.132b845c.chunk.js"
   ]
 }

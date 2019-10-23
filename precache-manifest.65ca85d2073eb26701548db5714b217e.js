@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bf42abbf0cff5f395da00c3d876ee8a",
+    "revision": "881beaf2e6d73cb6ad6acf876f5a11b3",
     "url": "/prework-favfonts/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/prework-favfonts/static/css/2.aa7fcd32.chunk.css"
   },
   {
-    "revision": "0f7429ac874c672278cb",
-    "url": "/prework-favfonts/static/css/main.62462f70.chunk.css"
+    "revision": "680f34256d6eb6894618",
+    "url": "/prework-favfonts/static/css/main.5e50144d.chunk.css"
   },
   {
     "revision": "f67ae956c5da05fc7c40",
     "url": "/prework-favfonts/static/js/2.2cf664f4.chunk.js"
   },
   {
-    "revision": "0f7429ac874c672278cb",
+    "revision": "680f34256d6eb6894618",
     "url": "/prework-favfonts/static/js/main.132b845c.chunk.js"
   },
   {
