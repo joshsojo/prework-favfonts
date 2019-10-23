@@ -1,24 +1,9 @@
 import React from "react";
 
 import { Col, Icon } from "antd";
-import styled from "styled-components";
+import FontText from "./font-text.component";
 import "antd/dist/antd.css";
 import "./font-card.styles.scss";
-
-const FontText = styled.p`
-  @import url('${props => props.link}');
-  font-family: '${props => props.font || "Open Sans"}', ${props =>
-  props.category || "sans-serif"};
-  font-size: ${props => props.size || 32}px;
-  line-height: 1.1;
-   display: block;
-  display: -webkit-box;
-      height: 141px;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-`;
 
 const FontCard = ({ family, category, size, text, cardMd, cardLg, cardXl }) => (
   <Col xs={24} sm={24} md={cardMd} lg={cardLg} xl={cardXl}>
