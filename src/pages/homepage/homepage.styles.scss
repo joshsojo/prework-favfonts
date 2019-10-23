@@ -31,16 +31,6 @@
   &__toggle {
     width: 30%;
   }
-  &__col {
-    @media only screen and (max-width: 575px) {
-      &__toggle-grid,
-      &__toggle-dark,
-      &__font,
-      &__type {
-        display: none;
-      }
-    }
-  }
   &__icon {
     &:hover,
     &active {
@@ -87,6 +77,27 @@
 
 .footer {
   position: fixed;
-  bottom: 1rem;
+
+  bottom: 0.2rem;
   width: 100%;
+}
+
+.load-more {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: rgba(#000, 0);
+  border: none;
+  outline: none;
+  height: 75px;
+  .down-arrow {
+    transition: all 0.5s;
+  }
+  &:hover,
+  &:active {
+    cursor: pointer;
+    color: #ee0900;
+    .down-arrow {
+      margin-top: 0.5rem;
+    }
+  }
 }

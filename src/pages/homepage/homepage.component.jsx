@@ -18,6 +18,8 @@ class HomePage extends React.Component {
       grideViewToggle: false,
       fontsArray: [],
       isLoading: false,
+      loadTotal: 52,
+      loadLimit: 52,
       cardMd: 6,
       cardLg: 6,
       cardXl: 6
@@ -87,7 +89,11 @@ class HomePage extends React.Component {
       )
         .then(response => response.json())
         .then(result =>
-          this.setState({ fontsArray: result.items, isLoading: false })
+          this.setState({
+            fontsArray: result.items,
+            isLoading: false,
+            loadTotal: result.items.length
+          })
         );
     } catch (error) {
       console.log("Error: ", error);
@@ -102,6 +108,8 @@ class HomePage extends React.Component {
       fontSize,
       inputWordField,
       searchFontsField,
+      loadTotal,
+      loadLimit,
       isLoading,
       cardMd,
       cardLg,
@@ -127,8 +135,8 @@ class HomePage extends React.Component {
               }}
             >
               <Col
-                xs={23}
-                sm={23}
+                xs={20}
+                sm={20}
                 md={16}
                 lg={9}
                 xl={9}
@@ -171,7 +179,6 @@ class HomePage extends React.Component {
                 md={3}
                 lg={3}
                 xl={3}
-                // style={{ marginTop: "1rem" }}
                 className="input-row__col__font"
               >
                 <select
@@ -187,12 +194,11 @@ class HomePage extends React.Component {
                 </select>
               </Col>
               <Col
-                xs={0}
-                sm={0}
+                xs={2}
+                sm={2}
                 md={2}
                 lg={1}
                 xl={1}
-                // style={{ marginTop: "1rem" }}
                 onClick={() => this.toggleDarkMode()}
                 className="input-row__col__toggle-dark"
               >
@@ -234,7 +240,7 @@ class HomePage extends React.Component {
           <Row gutter={[16, 16]}>
             {!isLoading ? (
               filteredFontArray
-                .filter((item, idx) => idx < 50)
+                .filter((item, idx) => idx < loadLimit)
                 .map((font, index) => (
                   <FontCard
                     key={index}
@@ -249,6 +255,15 @@ class HomePage extends React.Component {
                 ))
             ) : (
               <Spin />
+            )}
+            {loadLimit >= loadTotal ? null : (
+              <button
+                className="load-more"
+                onClick={() => this.setState({ loadLimit: loadLimit + 52 })}
+              >
+                <p className="load-more__text">load more</p>
+                <Icon type="down" className="down-arrow" />
+              </button>
             )}
           </Row>
         </section>
