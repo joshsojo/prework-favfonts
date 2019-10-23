@@ -73,6 +73,12 @@
 
 .main-section {
   margin: 3rem auto;
+  &__viewing-total {
+    text-align: left;
+    span {
+      color: #ff5252;
+    }
+  }
 }
 
 .footer {
@@ -95,7 +101,7 @@
   &:hover,
   &:active {
     cursor: pointer;
-    color: #ee0900;
+    color: #ff5252;
     .down-arrow {
       margin-top: 0.5rem;
     }

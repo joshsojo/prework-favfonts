@@ -118,6 +118,7 @@ class HomePage extends React.Component {
     const filteredFontArray = fontsArray.filter(font =>
       font.family.toLowerCase().includes(searchFontsField.toLowerCase())
     );
+    const filteredTotal = filteredFontArray.length;
     return (
       <div
         className={`home-page container ${
@@ -237,6 +238,10 @@ class HomePage extends React.Component {
         </div>
         {/* END OF INPUT FUNCTION */}
         <section className="main-section">
+          <p className="main-section__viewing-total">
+            Viewing <span>{filteredTotal}</span> of <span>{loadTotal}</span>{" "}
+            font families
+          </p>
           <Row gutter={[16, 16]}>
             {!isLoading ? (
               filteredFontArray
@@ -256,7 +261,7 @@ class HomePage extends React.Component {
             ) : (
               <Spin />
             )}
-            {loadLimit >= loadTotal ? null : (
+            {loadLimit >= filteredTotal ? null : (
               <button
                 className="load-more"
                 onClick={() => this.setState({ loadLimit: loadLimit + 52 })}
