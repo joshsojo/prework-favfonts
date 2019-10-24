@@ -133,7 +133,7 @@ class HomePage extends React.Component {
               }}
             >
               <Col
-                xs={21}
+                xs={20}
                 sm={9}
                 md={8}
                 lg={8}
@@ -192,7 +192,7 @@ class HomePage extends React.Component {
                 </select>
               </Col>
               <Col
-                xs={2}
+                xs={3}
                 sm={2}
                 md={2}
                 lg={2}
