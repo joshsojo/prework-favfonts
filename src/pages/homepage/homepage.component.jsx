@@ -84,6 +84,7 @@ class HomePage extends React.Component {
   };
 
   componentDidMount() {
+    // Fetch Font Families Data from Google's API
     try {
       this.setState({ isLoading: true });
       fetch(
@@ -117,9 +118,11 @@ class HomePage extends React.Component {
       cardLg,
       cardXl
     } = this.state;
+    // Check for the font the user is search for in the fontsArray
     const filteredFontArray = fontsArray.filter(font =>
       font.family.toLowerCase().includes(searchFontsField.toLowerCase())
     );
+    // Get the length of the filterd fonts array
     const filteredTotal = filteredFontArray.length;
     return (
       <div className="home-page">
@@ -133,8 +136,8 @@ class HomePage extends React.Component {
               }}
             >
               <Col
-                xs={20}
-                sm={9}
+                xs={19}
+                sm={8}
                 md={8}
                 lg={8}
                 xl={8}
@@ -173,10 +176,10 @@ class HomePage extends React.Component {
               </Col>
               <Col
                 xs={0}
-                sm={3}
+                sm={4}
                 md={3}
-                lg={3}
-                xl={3}
+                lg={2}
+                xl={2}
                 className="input-row__col__font"
               >
                 <select
@@ -200,11 +203,11 @@ class HomePage extends React.Component {
                 onClick={() => this.toggleDarkMode()}
                 className="input-row__col__toggle-dark"
               >
-                {!darkModeToggle ? (
-                  <Icon className="mode-toggle mode-toggle__dark"></Icon>
-                ) : (
-                  <Icon className="mode-toggle mode-toggle__white"></Icon>
-                )}
+                <button
+                  className={`mode-toggle ${
+                    !darkModeToggle ? "mode-toggle__dark" : "mode-toggle__white"
+                  }`}
+                ></button>
               </Col>
               <Col
                 xs={0}
@@ -221,7 +224,7 @@ class HomePage extends React.Component {
                   <Icon className="input-row__icon" type="unordered-list" />
                 )}
               </Col>
-              <Col xs={1} sm={1} md={1} lg={1} xl={1}>
+              <Col xs={2} sm={1} md={1} lg={1} xl={1}>
                 <button className="reset-button" type="reset">
                   <Icon
                     onClick={() => this.reloadPage()}
@@ -270,6 +273,8 @@ class HomePage extends React.Component {
             )}
           </Row>
         </section>
+        {/* END OF SECTION */}
+        {/* BEGINNING OF FOOTER */}
         <footer className="footer">
           <p>Made by Josh | 2019 | Chingu Pre-Work Project</p>
         </footer>
