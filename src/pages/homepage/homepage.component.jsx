@@ -201,9 +201,9 @@ class HomePage extends React.Component {
                 className="input-row__col__toggle-dark"
               >
                 {!darkModeToggle ? (
-                  <button className="mode-toggle mode-toggle__dark"></button>
+                  <Icon className="mode-toggle mode-toggle__dark"></Icon>
                 ) : (
-                  <button className="mode-toggle mode-toggle__white"></button>
+                  <Icon className="mode-toggle mode-toggle__white"></Icon>
                 )}
               </Col>
               <Col
@@ -222,13 +222,13 @@ class HomePage extends React.Component {
                 )}
               </Col>
               <Col xs={1} sm={1} md={1} lg={1} xl={1}>
-                <button className="reset-button" type="reset">
-                  <Icon
-                    onClick={() => this.reloadPage()}
-                    className="input-row__icon"
-                    type="reload"
-                  />
-                </button>
+                {/* <button className="reset-button" type="reset"> */}
+                <Icon
+                  onClick={() => this.reloadPage()}
+                  className="input-row__icon"
+                  type="reload"
+                />
+                {/* </button> */}
               </Col>
             </Row>
           </form>
