@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/prework-favfonts/static/css/main.152f5a40.chunk.css",
-    "main.js": "/prework-favfonts/static/js/main.c9fe8989.chunk.js",
-    "main.js.map": "/prework-favfonts/static/js/main.c9fe8989.chunk.js.map",
+    "main.css": "/prework-favfonts/static/css/main.2b0ae9e1.chunk.css",
+    "main.js": "/prework-favfonts/static/js/main.7f72146a.chunk.js",
+    "main.js.map": "/prework-favfonts/static/js/main.7f72146a.chunk.js.map",
     "runtime-main.js": "/prework-favfonts/static/js/runtime-main.660c8cc5.js",
     "runtime-main.js.map": "/prework-favfonts/static/js/runtime-main.660c8cc5.js.map",
     "static/css/2.aa7fcd32.chunk.css": "/prework-favfonts/static/css/2.aa7fcd32.chunk.css",
     "static/js/2.c13d46ad.chunk.js": "/prework-favfonts/static/js/2.c13d46ad.chunk.js",
     "static/js/2.c13d46ad.chunk.js.map": "/prework-favfonts/static/js/2.c13d46ad.chunk.js.map",
     "index.html": "/prework-favfonts/index.html",
-    "precache-manifest.cd7b725a2de25a5c0e6beff0af9d5d87.js": "/prework-favfonts/precache-manifest.cd7b725a2de25a5c0e6beff0af9d5d87.js",
+    "precache-manifest.fe82f39fbf10b9ea4098a0db5f48604d.js": "/prework-favfonts/precache-manifest.fe82f39fbf10b9ea4098a0db5f48604d.js",
     "service-worker.js": "/prework-favfonts/service-worker.js",
     "static/css/2.aa7fcd32.chunk.css.map": "/prework-favfonts/static/css/2.aa7fcd32.chunk.css.map",
-    "static/css/main.152f5a40.chunk.css.map": "/prework-favfonts/static/css/main.152f5a40.chunk.css.map"
+    "static/css/main.2b0ae9e1.chunk.css.map": "/prework-favfonts/static/css/main.2b0ae9e1.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.660c8cc5.js",
     "static/css/2.aa7fcd32.chunk.css",
     "static/js/2.c13d46ad.chunk.js",
-    "static/css/main.152f5a40.chunk.css",
-    "static/js/main.c9fe8989.chunk.js"
+    "static/css/main.2b0ae9e1.chunk.css",
+    "static/js/main.7f72146a.chunk.js"
   ]
 }
