@@ -133,11 +133,11 @@ class HomePage extends React.Component {
               }}
             >
               <Col
-                xs={20}
-                sm={20}
-                md={16}
-                lg={9}
-                xl={9}
+                xs={21}
+                sm={9}
+                md={8}
+                lg={8}
+                xl={8}
                 style={{
                   borderRight: "1px solid #868686"
                 }}
@@ -153,8 +153,8 @@ class HomePage extends React.Component {
               </Col>
               <Col
                 xs={0}
-                sm={0}
-                md={0}
+                sm={9}
+                md={9}
                 lg={9}
                 xl={9}
                 style={{
@@ -173,7 +173,7 @@ class HomePage extends React.Component {
               </Col>
               <Col
                 xs={0}
-                sm={0}
+                sm={3}
                 md={3}
                 lg={3}
                 xl={3}
@@ -192,11 +192,11 @@ class HomePage extends React.Component {
                 </select>
               </Col>
               <Col
-                xs={2}
+                xs={3}
                 sm={2}
                 md={2}
-                lg={1}
-                xl={1}
+                lg={2}
+                xl={2}
                 onClick={() => this.toggleDarkMode()}
                 className="input-row__col__toggle-dark"
               >

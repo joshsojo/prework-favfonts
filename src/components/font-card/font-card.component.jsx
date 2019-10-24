@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Col, Icon } from "antd";
-import FontText from "./font-text.component";
+import FontText from "../font-text/font-text.component";
 import "antd/dist/antd.css";
 import "./font-card.styles.scss";
 
